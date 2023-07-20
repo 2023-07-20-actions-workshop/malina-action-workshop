@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,5 +27,5 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: 'Report Coverage'
-    - uses:  davelosert/vitest-coverage-report-action@v2
+      uses:  davelosert/vitest-coverage-report-action@v2
       if: always()
