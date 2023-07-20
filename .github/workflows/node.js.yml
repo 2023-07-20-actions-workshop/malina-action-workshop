@@ -60,14 +60,6 @@ jobs:
             type=ref,event=tag
             type=ref,event=pr
             type=sha,event=branch,prefix=,suffix=,format=short
-            
-      - name: Define Output
-        id: test
-        run: echo 'execute=false' >> $GITHUB_OUTPUT
-        
-      - name: Access Output
-        if: ${{ steps.test.outputs.execute == 'true' }}
-        run: echo ${{ steps.test.outputs.day }}
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v2
