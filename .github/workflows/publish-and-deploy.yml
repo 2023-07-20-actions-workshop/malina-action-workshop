@@ -1,4 +1,4 @@
-name: Packaging
+name: Publish and Deploy
 
 on:
   push:
